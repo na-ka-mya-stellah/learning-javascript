@@ -19,7 +19,7 @@ const promise=new Promise((resolve,reject)=>{
  promise2.then(result=>console.log(result))
 
 
-//  a promise that uses a web API
+//  A PROMISE THAT USES A WEB API
 // example 1
 const promise3=new Promise((resolve,reject)=>{
   if (true){
@@ -40,7 +40,29 @@ const promise4=new Promise((resolve,reject)=>{
 })
 promise4.then(result=>console.log(result))
 
-// chaining in promises
+// example 3
+const promise6 = new Promise((resolve,reject)=>{
+  if (true)
+    setTimeout(()=>{resolve('your a genius🤔');},9000)
+  else{
+    reject('oops nooooo')
+  }
+})
+promise6.then(result=>console.log(result))
+
+// example 4
+let promise7 = new Promise((resolve,reject)=>{
+  if (true)
+    setTimeout(()=>{resolve('ohh my goodness you really did it');},2000)
+  else{
+    reject('noo your nothing but next time better')
+  }
+})
+  promise7.then(result=>console.log(result))
+
+
+
+// CHAINING IN PROMISES
 const promise5 =new Promise((resolve,reject)=>{
   if (true){
     resolve('stuff worked')
