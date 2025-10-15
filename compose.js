@@ -72,8 +72,22 @@ const compose7 = (s,t) => (data) =>t(s(data))
 
 const add2 = num => num + 2
 
-const makeModulo = num => num % 100
+const makeModulus = num => num % 100
 
-const add2AndMakeModulo = compose7(add2 , makeModulo)
+const add2AndMakeModulus = compose7(add2 , makeModulus)
 
-console.log(add2AndMakeModulo(38))
+console.log(add2AndMakeModulus(38))
+
+
+// PIPE IN JAVASCRIPT
+//  example 1
+
+const PIPE =  (w,k) => (data) => k(w(data))
+
+const add3 = num => num + 3
+
+const subtract3 = num => num - 3
+
+const add3AndSubtract3 = PIPE(add3,subtract3)
+
+console.log(add3AndSubtract3(3))

@@ -63,6 +63,8 @@ let promise7 = new Promise((resolve,reject)=>{
 
 
 // CHAINING IN PROMISES
+
+// example 1
 const promise5 =new Promise((resolve,reject)=>{
   if (true){
     resolve('stuff worked')
@@ -77,6 +79,46 @@ promise5
   console.log(result2)
 })
 .catch(()=>console.log('oops'))
-  
 
 
+// example 2
+
+let promise9 = new Promise((resolve,reject)=>{
+  if (true)
+    setTimeout(()=>{resolve ('your just great at that')},9000)
+})
+promise9 
+.then(result =>result + '!')
+.then (result2=>{
+  console.log(result2 )
+  return (result2 + '!')
+})
+.then(result3=>result3 + '!')
+.then (result3=>{
+  console.log(result3)
+  return(result3 + '!')
+})
+.then (result4 =>result4 +'?')
+.then (result4=>{
+  console.log(result4)
+  return (result4 + '?')
+})
+
+
+.then (result5 =>result5 + '##')
+.then (result5 =>{
+  console.log(result5)
+})
+
+// example3
+
+const promise8 = new Promise((resolve,reject)=>{
+  if (true){
+    resolve('fantastic 👍')
+  }else{
+    reject('whattttttttttttt🤔')
+  }
+})
+ promise.then(result =>console.log(result))
+
+// console logging multiple promises with the promise.all method
