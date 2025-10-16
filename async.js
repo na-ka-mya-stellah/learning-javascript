@@ -24,7 +24,7 @@
 
   fetchTodos()
 
-  // EXAMPLE 2
+//   // EXAMPLE 2
 async function fetchUsers(){
   
   const response = await fetch ('https://jsonplaceholder.typicode.com/users') 
@@ -37,7 +37,7 @@ async function fetchUsers(){
 
 fetchUsers()
 
-// EXAMPLE 3
+// // EXAMPLE 3
 async function fetchPosts (){
 
   const response = ('https://jsonplaceholder.typicode.com/posts');
@@ -50,7 +50,7 @@ async function fetchPosts (){
 
 fetchPosts()
 
-// EXAMPLE 4
+// // EXAMPLE 4
 async function fetchComments(){
 
   const response = await fetch ('https://jsonplaceholder.typicode.com/posts/1/comments')
@@ -62,7 +62,7 @@ async function fetchComments(){
 }
 fetchComments()
 
-// EXAMPLE 5
+// // EXAMPLE 5
 
 async function fetchPhotos(){
 
@@ -75,19 +75,10 @@ async function fetchPhotos(){
 
 fetchPhotos()
 
-// EXAMPLE 6
-const urls=[
-  'https://jsonplaceholder.typicode.com/posts',
-  'https://jsonplaceholder.typicode.com/photos',
-  'https://jsonplaceholder.typicode.com/comments',
-]
 
+// // ASYNC FUNCTIONS WITHOUT A WEB API
 
-
-
-// ASYNC FUNCTIONS WITHOUT A WEB API
-
-// 1 function declarations
+// // 1 function declarations
 function walkDog(){
   return new Promise(resolve=>{
     setTimeout(()=>{resolve('you walked the dog🐕');},2000);
@@ -105,7 +96,7 @@ function walkDog(){
     })
   }
  
-  // 2 making use of async await
+//   // 2 making use of async await
 async function doChores(){
 
   const walkDogResult = await walkDog();
@@ -120,7 +111,7 @@ async function doChores(){
 
 doChores()
 
-// EXAMPLE 2
+// // EXAMPLE 2
 
 function playVolleyball(){
 return new Promise (resolve=>{
@@ -153,3 +144,139 @@ async function playGames(){
 }
 
 playGames()
+
+// EXAMPLE 3
+function mathematics(){
+  return new Promise((resolve,reject)=>
+    {resolve('this subject is only for geniuses')
+  })
+}
+
+function chemistry(){
+  return new Promise((resolve,reject)=>{
+    resolve('maybe you can try out this subject')
+  })
+}
+
+function Physics(){
+  return new Promise((resolve,reject)=>{
+  resolve('nothing much just confusion and space science they have never visited')})
+}
+
+
+async function chooseSubjectsYouCanDo(){
+  const mathematicsSubject = await mathematics();
+  console.log(mathematicsSubject)
+
+  const chemistrySubject = await chemistry();
+  console.log(chemistrySubject)
+
+  const physicsSubject = await Physics();
+  console.log(physicsSubject)
+}
+
+chooseSubjectsYouCanDo()
+
+
+// EXAMPLE 4
+function babies(){
+  return new Promise((resolve,reject)=>{
+    resolve('the best stage when theres is no sinning')
+  })
+}
+
+function adoloscents(){
+  return new Promise((resolve,reject)=>{
+    resolve('ooops i dont want to get there because of temptations and disturbances😁')
+  })
+}
+
+function elderly(){
+  return new Promise((resolve,reject)=>{
+    resolve('hmmm where you need help like never before')
+  })
+}
+
+async function differentAges(){
+  const babiesAge = await babies();
+  console.log(babiesAge)
+
+  const adoloscentsAge = await adoloscents();
+  console.log(adoloscentsAge)
+
+  const elderlyAge = await elderly();
+  console . log(elderlyAge)
+}
+
+differentAges()
+
+
+// EXAMPLE 5)
+function arsenal(){
+  return new Promise((resolve,reject)=>{
+    resolve('THE GUNNERS for real')
+  })
+}
+
+function manchestercity(){
+  return new Promise((resolve,reject)=>{
+    resolve('maybe they will try next time for a win')
+  })
+}
+
+function liverpool(){
+  return new Promise((resolve,reject)=>{
+    resolve('now you we are so sorry coz your not even allowed to try again')
+  })
+}
+
+async function premierLeagueTeams(){
+  const arsenalTeam = await arsenal()
+  console.log(arsenalTeam)
+
+  const manchestercityTeam = await manchestercity()
+  console.log(manchestercityTeam)
+
+  const liverpoolTeam = await liverpool()
+  console.log(liverpoolTeam)
+}
+
+premierLeagueTeams()
+
+// EXAMPLE 6
+
+function bagishu(){
+  return new Promise((resolve,reject)=>{
+    resolve('The toughest tribe ever where necessary😒')
+  })
+}
+
+function ankole(){
+  return new Promise((resolve,reject)=>{
+    resolve('😁😁😁nothing much just cattle keeping')
+  })
+}
+
+function ganda(){
+  return new Promise ((resolve,reject)=>{
+    if (true){
+      setTimeout(()=>{
+        resolve('hell noooo they betray themselves')},2000);
+    }else{
+      reject('nothing you can do anyway')
+    }
+  });
+}
+
+async function tribes(){
+  const bagishuTribe = await bagishu();
+  console.log(bagishuTribe)
+
+  const ankoleTribe = await ankole();
+  console.log(ankoleTribe)
+
+  const gandaTribe = await ganda();
+  console.log(gandaTribe)
+}
+
+tribes()

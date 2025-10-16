@@ -120,5 +120,15 @@ const promise8 = new Promise((resolve,reject)=>{
   }
 })
  promise.then(result =>console.log(result))
+ 
+
+ const promise10 = new Promise((resolve,reject)=>{
+  if (true){
+    resolve('very cool')
+  }else{
+    reject('ahhh nothing')
+  }
+ })
+ promise.then(result=>console.log(result))
 
 // console logging multiple promises with the promise.all method
