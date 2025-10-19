@@ -280,3 +280,34 @@ async function tribes(){
 }
 
 tribes()
+
+// EXAMPLE 5
+function humans(){
+  return new Promise((resolve,reject)=>{
+    resolve('the treasured creatures of God')
+  })
+}
+
+function plants(){
+  return new Promise((resolve,reject)=>{
+    resolve('they were created for medicinal reasons')
+  })
+}
+
+function birds(){
+  new Promise((resolve,rejet)=>{
+    resolve('they are so special before men,God and every creature')
+  })
+}
+
+async function creatures(){
+  const humanscreature = await humans();
+  console.log(humanscreature)
+
+  const plantscreature = await plants();
+  console.log(plantscreature)
+
+  const birdscreature = await birds();
+  console.log(birdscreature)
+}
+creatures()
