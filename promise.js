@@ -131,4 +131,22 @@ const promise8 = new Promise((resolve,reject)=>{
  })
  promise.then(result=>console.log(result))
 
-// console logging multiple promises with the promise.all method
+// console logging multiple promises with the promise.all method. 
+
+const urls = [ 
+  'https://jsonplaceholder.typicode.com/posts/1', 
+  'https://jsonplaceholder.typicode.com/comments/2',
+  'https://jsonplaceholder.typicode.com/albums/3'
+];
+
+Promise.all(
+  urls.map(url => {
+    return fetch(url).then(res => res.json());
+  })
+)
+.then(array => {
+  console.log('1', array[0]);
+  console.log('2', array[1]);
+  console.log('3', array[2]);
+})
+.catch(err => console.error('Error fetching data:', err))
