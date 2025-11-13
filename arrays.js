@@ -133,3 +133,87 @@ console.log(games)
 
 // Example usage: merges two sorted arrays into one sorted array
 console.log(mergeSortedArrays([1, 3, 5], [2, 4, 6]));
+
+
+// example 3
+const array1 =[1,2,3] 
+const array2 = [4,5,6]
+const array3 = [7,8,9]
+
+const merged = [...array1,...array2,...array3]
+console.log(merged)
+
+
+// example 4
+
+const fruitsArray1 = ['apple','orange','mango']
+const fruitsArray2 = ['banana','kiwi','grapes']
+
+const sortedFruits = [...fruitsArray1,...fruitsArray2]
+console.log(sortedFruits)
+
+// example 5
+const gamesPlayed = ['volleyball','basketball','cricket']
+const gamesDisliked = ['rugby','snow boarding']
+
+const allGames = gamesPlayed.concat(gamesDisliked)
+console.log(allGames)
+
+// example 6
+
+function animals (domesticAnimals,wildAnimals){
+    const allAnimalsAllTogether = [] 
+    let x= 0;
+    let y = 0;
+
+    while (x < domesticAnimals.length){
+        allAnimalsAllTogether.push(domesticAnimals[x])
+        x++
+    }
+    while (y < wildAnimals.length){
+        allAnimalsAllTogether.push(wildAnimals[y])
+        y++
+    }
+    return allAnimalsAllTogether;
+}
+console.log(animals(['cow','goat','horse',],['lion','tiger','leopard']))
+
+
+// example 7
+function diet (vegetables,fresh){
+    const balancedDiet = []
+    let n = 0;
+    let t = 0;
+
+    while(n < vegetables.length){
+        balancedDiet.push(vegetables[n])
+        n++
+    }
+
+    while (t < fresh.length){
+        balancedDiet.push(fresh[t])
+        t++
+    }
+    return balancedDiet;
+}
+console.log(diet(['spinach','broccoli','cabbage'],['beef','chicken','mutton']))
+
+
+// example 8
+function subjects(science,arts){
+    allSubjects = []
+    let a = 0;
+    let b = 0;
+
+    while(a<science.length){
+        allSubjects.push(science[a])
+        a++
+    }
+
+    while(b<arts.length){
+        allSubjects.push(arts[b])
+        b++
+    }
+    return allSubjects;
+}
+console.log(subjects(['biolgy','chemistry','physics'],['geography','history','english']))
