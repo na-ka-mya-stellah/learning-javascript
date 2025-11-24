@@ -38,7 +38,7 @@ console.log(`${key}:`, object[key]);
 console.log('Has "age"?', 'age' in object);
 console.log('Has "defense"?', 'defense' in object);
 
-// (3)ACCESS
+// (3)ACCESS (O(1))
 // Access means retrieving the value of an existing key directly.
 
 console.log('--- ACCESS ---');
@@ -52,4 +52,44 @@ console.log('Access attackingPower:', object.attackingPower);
 const accessKey = 'energy';
 console.log(`Access ${accessKey}:`, object[accessKey]);
 
+// example 2
+const member = {
 
+    firstName : 'prince',
+
+    secondName : 'david',
+
+    college : 'harvard university',
+
+    course : 'computer science',
+    
+    year : 2024,
+
+    excelled : true
+
+}
+
+console.log (member . firstName)
+
+console.log (member . secondName)
+
+console.log (member . college)
+
+console.log (member . course)
+
+console.log (member . year)
+
+console.log (member . excelled)
+
+console.log ( member . grade = 'senior')
+
+console.log (member . country = 'canada')
+
+console.log  (member);
+
+
+console.log ('has college?', 'college' in member);
+
+console.log ('has grade?', ' grade' in member);
+
+console.log ('has excelled?', ' excelled' in member);

@@ -1,5 +1,23 @@
-const members=["sharif","kuky","jonathan"]
-console.log(members)
+const users=[
+    {
+        username:'cruz',
+        accounts:'facebook',
+        job:'engineer'
+    },
+
+    {
+        username:'lilly',
+        accounts:'instagram',
+        job:'designer'
+    }
+]
+console.log(users);
+
+console.log(users[0].username);
+
+console.log(users[0].accounts);
+
+console.log(users[0].job);
 
 // ARRAY METHODS
 // (1) THE PUSH METHOD
@@ -217,3 +235,7 @@ function subjects(science,arts){
     return allSubjects;
 }
 console.log(subjects(['biolgy','chemistry','physics'],['geography','history','english']))
+
+// example 9
+
+

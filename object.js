@@ -2,12 +2,19 @@ const person = {
   name : "sharif",
   age : 94,
   gender : "male",
-  isMarried : true
+  isMarried : true,
+  brothers:['abdul','sharifah','faizal'],
+  hobby:function(){
+    return 'playing football';
+  }
+  
 }
-console.log(person)
 
-// object spread operator
-// EXAMPLE 1
+console.log(person.hobby())
+
+
+
+// EXAMPLE 1 (the rest operator)
 const animals = { 
 
   tiger : 'king of the jungle' ,
@@ -20,61 +27,69 @@ const animals = {
 
 }
 
-const  { tiger , ... rest }  =  animals
+
+const  { tiger ,...rest}= animals
+
 console . log (tiger)
+
 console . log (rest)
+
+// OBJECT SPREAD OPERATOR
 
 // different use cases of the spread operator
 // (1) adding elements of an existing array to a new array
 
+// EXAMPLE 1
 const   subjects  =  [ 'mathematics' , 'chemistry' , 'physics' ]
+
+
 console . log ( subjects )
 
+
 const allSubjects = ['biology','english','french',...subjects]
+
 console . log ( allSubjects ) 
 
 // (2)pass elements of an array as arguments to a function
 
 function  addNumbers ( a , b , c ) {
+
   console . log ( 1  +  2  +  3 )
+
 }
+
 var  args  =  [ 1 , 2 , 3 ]
+
 addNumbers(...args)
 
+
 // EXAMPLE 2
-function  programmingLanguages ( react , javascript , tailwind ){
-  console . log ( react )
-  console . log (javascript)
-  console . log (tailwind) 
+function  programmingLanguages ( ){
+console.log(arguments)
 }
 
 const langs  =  [ 'java' , 'python' , 'c#' , 'c++' ]
-programmingLanguages ( ...langs ) 
+
+programmingLanguages ( ...langs,'javascript','ruby','swift' ) 
+
+
 
 // EXAMPLE 3
-function  subtract( x , y ,z ){
-  console . log ( 10 - 5 - 2)
-}
-
-const  subtractedNumbers = [ 10 , 5 , 2 ]
-subtract ( ...subtractedNumbers )
-
-// EXAMPLE 4 
-function  fruits ( mango , orange , grapes ) { 
-  console . log ( mango ) ,
-  console . log ( orange ) ,
-  console . log ( grapes )
+function  fruits (  ) { 
+    console.log(arguments)
 }
  let  deliciousFruits  =   [ 'kiwi' , 'strawberries' , 'apples' ]
- fruits ( ... deliciousFruits )
 
-//EXAMPLE 5
-let buttons  =  function  computerButtons ( tab , shift , control ){
-console . log( tab ),
-console . log( shift ),
-console . log (control)
+ fruits ( ... deliciousFruits,'grapes','mangoes');
+
+
+//EXAMPLE 4
+let buttons  =  function  computerButtons ( ...items){
+console.log (items)
 }
 
 let mostUsedButtons = ['capslock','pageUp', 'pageDown']
-buttons(...mostUsedButtons) 
+
+buttons(...mostUsedButtons, 'esc','enter')
+ 
 
