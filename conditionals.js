@@ -97,30 +97,30 @@ person.password !==2424 ? console.log ('enter correct password') : console.log (
 // example 7
 
     
-// const user = {
-//     age : 20,
-//     nationality: 'american',
-//     religion : 'christian',
-//     maritalStatus : 'single',
-//     gender : 'male'
-// }
+const user = {
+    age : 20,
+    nationality: 'american',
+    religion : 'christian',
+    maritalStatus : 'single',
+    gender : 'male'
+}
 
-// const userInput = {
-//     age : Number(prompt('enter your age')),
-//     nationality: prompt('enter your nationality'),
-//     religion : prompt('enter your religion'),
-//     maritalStatus : prompt('enter your marital status'),
-//     gender : prompt ('enter your gender')
-// };
+const userInput = {
+    age : Number(prompt('enter your age')),
+    nationality: prompt('enter your nationality'),
+    religion : prompt('enter your religion'),
+    maritalStatus : prompt('enter your marital status'),
+    gender : prompt ('enter your gender')
+};
 
-// (userInput.age === user.age &&
-//      userInput.nationality === user.nationality &&
-//       userInput.religion ===user.religion &&
-//        userInput.maritalStatus === user.maritalStatus
-//     )
-//     ?
+(userInput.age === user.age &&
+     userInput.nationality === user.nationality &&
+      userInput.religion ===user.religion &&
+       userInput.maritalStatus === user.maritalStatus
+    )
+    ?
 
-//     console.log ('access granted') : console.log ('access denied')
+    console.log ('access granted') : console.log ('access denied')
 
     // (3)The SWITCH
     // Example 1
@@ -210,3 +210,48 @@ person.password !==2424 ? console.log ('enter correct password') : console.log (
    console.log (theContinents('asia'));
    console.log (theContinents('europe'));
    console.log (theContinents('north america'));
+
+//    example 3
+
+const cities =[
+    'newyork',
+    'losangeles',
+    'chicago',
+    'houston',
+    'phoenix'
+
+]
+function theCities(cities){
+    var result;
+    switch(cities){
+        case 'newyork':
+            result = 'soo many dreams to get there';
+            break;
+
+        case 'losangeles':
+            result = 'i am not sure';
+            break;
+
+        case 'chicago':
+            result = 'not so sure';
+            break;
+
+        case 'houston':
+            result = 'nice name';
+            break;
+
+        case 'phoenix':
+            result = 'very nice name';
+            break;
+    }
+
+    return result;
+}
+console.log(theCities('newyork'));
+console.log(theCities('losangeles'));
+console.log(theCities('chicago'));
+console.log(theCities('phoenix'));
+console.log(theCities('houston'));
+
+
+
