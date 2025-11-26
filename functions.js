@@ -52,3 +52,8 @@ var addition = function count(v,w){
 }
 console.log(addition(10,15))
 
+// ARROW FUNCTIONS
+// Example 1
+const addNumbers =(a, b=10) =>  (a + b)
+console.log (addNumbers(10))
+

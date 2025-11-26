@@ -38,3 +38,42 @@ let reversedData= (str)=>{
     return str.split('').reverse().join('')
 }
 console.log(reversedData('wrong data'))
+
+
+// TEMPLATE STRINGS
+
+// example 1
+const name = 'penuel'
+const age = 23
+const job = 'web developer'
+
+const person = `
+my name is ${name} and i am ${age} years old and iam a ${job}`
+
+console.log(person)
+
+// example 2
+
+const jungleAnimal ={
+    jungleName : 'mara',
+    species : 'carnivores',
+    habitant : 'bush',
+    food : 'meat',
+
+    getTheEntireAnimal(){
+        return (`the jungle animal is ${this.jungleName} and it is a ${this.species} and it lives in the ${this.habitant} and it eats ${this.food}`)
+
+    }
+};
+console.log(jungleAnimal.getTheEntireAnimal())
+
+// DEFAULT PARAMETERS and ARGUMENTS
+// Exampel 1
+
+function greet (name = ' ', age = 20){
+    return `hello ${name} and your age is ${age}`
+}
+
+console.log (greet('CATHY'))
+
+// Example 2
