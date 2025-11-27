@@ -93,3 +93,46 @@ console.log ('has college?', 'college' in member);
 console.log ('has grade?', ' grade' in member);
 
 console.log ('has excelled?', ' excelled' in member);
+
+
+// IMPLEMENTING A HASH TABLE
+
+// you create a class hashTable a blue print for creating objects
+class HashTable {
+
+    // The constructor method runs automatically when a new object is created
+    constructor(size){
+        this.data = new array (size);
+    }
+
+    // we defined a method called "hash" a private function for creating hash values
+
+    _hash(key){
+
+
+        // we initialized a variable "hash" with zero
+     let hash = 0;
+
+    //  loop through each character of string "key"
+     for (let i =0; i<key.length; i++) {
+
+         // Add the character’s Unicode value (from charCodeAt) times its index "i"
+            // Then take the remainder when divided by this.data.length (to keep the hash within bounds)
+        hash = (hash + key.charCodeAt(i) * i) % this.data.length
+     }
+
+
+     // Return the final hash value (a number representing an index)
+     return hash;
+
+    }
+}
+
+// Create a new instance (object) of HashTable with a size of 50
+const myHashTable = new HashTable(50);
+
+// Call the "set" method to store a key-value pair ('grapes', 10000)
+myHashTable.set ('grapes',10000)
+
+// Call the "get" method to retrieve the value for the key 'grapes'
+myHashTable.get ('grapes')

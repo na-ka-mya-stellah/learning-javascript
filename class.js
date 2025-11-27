@@ -1,10 +1,10 @@
 
 // class 1
-class Fight{
-  constructor(weapon,name,shield){
-    this.weapon = weapon;
-    this.name = name;
-    this.shield = shield;
+class Fight {
+  constructor ( weapon , name , shield ) {
+    this . weapon  =  weapon ;
+    this . name = name;
+    this . shield = shield;
   }
 }
 const fighter = new Fight('stones','dog','hammer')

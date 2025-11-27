@@ -1,6 +1,7 @@
 
 
 // THE MODULE PATTERN
+// (1)USING THE IIFE(Immediately Invoked Function)
 
 
 // EXAMPLE 1
@@ -146,3 +147,6 @@ var pickingTheBiggerNumber = (function(){
 })()
 
 console.log(pickingTheBiggerNumber.whichNumberIsBigger(30,60));
+
+
+// (2)THE ES6 MODULES

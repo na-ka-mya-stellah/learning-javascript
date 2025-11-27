@@ -289,7 +289,7 @@ function humans(){
 }
 
 function plants(){
-  return new Promise((resolve,reject)=>{
+  	return new Promise((resolve,reject)=>{
     resolve('they were created for medicinal reasons')
   })
 }
@@ -311,3 +311,30 @@ async function creatures(){
   console.log(birdscreature)
 }
 creatures()
+
+
+// EXAMPLE 6
+const urls = [
+    'https://jsonplaceholder.typicode.com/posts',
+    'https://jsonplaceholder.typicode.com/comments',
+    'https://jsonplaceholder.typicode.com/albums'
+]
+
+const getData = async function(){
+    try{
+        const [posts,comments,albums] = await Promise.all(
+            urls.map(async function (url){
+                const response = await fetch(url);
+                const data = await response.json();
+                return data;
+            
+            })
+        );
+        console.log('posts',posts);
+        console.log('comments',comments);
+        console.log('albums',albums);
+    } catch (err){
+        console.log('oopsie',err);
+    }
+}
+getData()

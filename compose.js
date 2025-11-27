@@ -78,6 +78,10 @@ const add2AndMakeModulus = compose7(add2 , makeModulus)
 
 console.log(add2AndMakeModulus(38))
 
+// EXAMPLE 8
+const compose8 = (u,v) => (data) => v(u(data))
+
+
 
 // PIPE IN JAVASCRIPT
 //  example 1

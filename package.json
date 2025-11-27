@@ -16,5 +16,7 @@
   "bugs": {
     "url": "https://github.com/na-ka-mya-stellah/learning-javascript/issues"
   },
-  "homepage": "https://github.com/na-ka-mya-stellah/learning-javascript#readme"
+  "homepage": "https://github.com/na-ka-mya-stellah/learning-javascript#readme",
+  "type": "module"
 }
+
