@@ -87,9 +87,53 @@ games.splice (1,'volleyball','skate boarding')
 
 console.log(games)
 
+// (5)The FOREACH method
+// for looping through an array
+
+// example 1
+
+const music = ['jazz','hiphop','rock','pop','country'];
+
+music.forEach(genre => console.log(genre));
+
+// example 2
+let arrays = [1,2,3,4,5]
+
+arrays.forEach (function (number){
+    console.log (number * 2)
+})
+
 // example 3
+const months = ['jan','feb','march','april']
+months.forEach(function(month){
+    console.log(month.toUpperCase())
+})
+
+// (6)The MAP method
+// for looping through an array and returning a new array
+// example 1
+
+const numbers2 = [4,2,3,4,5]
+const doubled = numbers2.map(function(num){
+    return num *2
+})
+console.log(doubled)
+
+// (7)The FILTER Method
+// for filtering out items in the array
+
+// exampel 1 with arrow functions
+const filterArray = [1,2,3,4,5]
+const filteredArray = filterArray.filter(num => num > 1)
+console.log(filteredArray)
 
 
+// example 2 without arrow funcctions
+const filterArray2 = [1,2,3,4,5]
+const filteredArray2 = filterArray2.filter(function(num){
+    return num > 1
+})
+console.log(filteredArray2)
  // DIFFERENT TYPES OF ARRAYS
 // (1)STATIC ARRAYS
  // These are fixed in size
@@ -217,16 +261,16 @@ function diet (vegetables,fresh){
 console.log(diet(['spinach','broccoli','cabbage'],['beef','chicken','mutton']))
 
 
-// example 8
+//  example 8
 function subjects(science,arts){
-    allSubjects = []
+    let allSubjects = []
     let a = 0;
-    let b = 0;
+     let b = 0;
 
-    while(a<science.length){
-        allSubjects.push(science[a])
-        a++
-    }
+     while(a<science.length){
+         allSubjects.push(science[a])
+         a++
+     }
 
     while(b<arts.length){
         allSubjects.push(arts[b])
@@ -234,7 +278,7 @@ function subjects(science,arts){
     }
     return allSubjects;
 }
-console.log(subjects(['biolgy','chemistry','physics'],['geography','history','english']))
+ console.log(subjects(['biolgy','chemistry','physics'],['geography','history','english']))
 
 // example 9
 
