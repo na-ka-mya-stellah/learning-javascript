@@ -93,3 +93,52 @@ let mostUsedButtons = ['capslock','pageUp', 'pageDown']
 buttons(...mostUsedButtons, 'esc','enter')
  
 
+// The REFERENCE Type
+// example 1
+const object1= {value : 10}
+const object2 = object1
+const object3 = {value : 16}
+
+console.log(object1 === object2)
+console.log(object1===object3)
+console.log (object2 === object3)
+
+// The CONTEXT
+// Example 1
+
+const object4 = {
+    a : function (){
+        console.log(this)
+    }
+}
+object4.a()
+
+// The INSTANTIATION
+// example 1
+
+class Player{
+    constructor(name,age){
+        this.name = name
+        this.age = age
+    }
+    introduce(){
+        console.log(`my name is ${this.name} and i am ${this.age} years old`)
+    }
+}
+
+class wizard extends Player{
+    constructor (name,age){
+        super (name,age)
+    }
+    play(){
+        console.log (`i am a ${this.name} and i am a ${this.age} years old wizard`)
+    }
+}
+
+const Player1 = new Player ('john',25)
+const wizard1 = new wizard ('nightmare',180)
+
+Player1.introduce()
+wizard1.play()
+
+

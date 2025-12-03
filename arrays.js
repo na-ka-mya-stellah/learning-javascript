@@ -134,6 +134,23 @@ const filteredArray2 = filterArray2.filter(function(num){
     return num > 1
 })
 console.log(filteredArray2)
+
+
+// (8)The REDUCE Method
+// for reducing an array to a single value
+// example 1
+const reduceArray = [1,2,3,4,5]
+const reducedArray = reduceArray .reduce ((accumulator,currentValue ) => accumulator + currentValue ,0)
+console.log(reduceArray)
+
+// example 1 (without arrow functions)
+const reduceArray2 = [1,2,3,4,5]
+const reducedArray2 = reduceArray2.reduce(function(accumulator,currentValue){
+    return accumulator + currentValue 
+},0);
+
+console.log(reducedArray2)
+
  // DIFFERENT TYPES OF ARRAYS
 // (1)STATIC ARRAYS
  // These are fixed in size

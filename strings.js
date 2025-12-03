@@ -76,4 +76,14 @@ function greet (name = ' ', age = 20){
 
 console.log (greet('CATHY'))
 
-// Example 2
+// STRING PADDING
+// exmaple 1
+
+const recipe = {
+    flavour : 'sweeet',
+    price : 200,
+    loction: 'macdonald'
+}
+
+console.log(recipe.flavour.padStart(10 , '!'))
+console.log(recipe.flavour.padEnd(10 , '👌'))
