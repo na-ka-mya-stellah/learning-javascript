@@ -142,3 +142,24 @@ Player1.introduce()
 wizard1.play()
 
 
+// The OBJECT.VALUES() AND OBJECT.ENTRIES() AND OBJECT.KEYS()
+// Example 1
+
+const obj = {
+    username  : 'sammy',
+    password : 'damn',
+    age : 20,
+    email : 'sammy@gmail.com'
+}
+
+Object.values(obj).forEach(function(value){
+    console.log (value)
+})
+
+Object.entries(obj).forEach (function(entry){
+    console.log (entry)
+})
+
+Object.keys(obj).forEach(function(key){
+    console.log(key)
+})

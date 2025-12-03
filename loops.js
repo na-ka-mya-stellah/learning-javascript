@@ -72,3 +72,26 @@ do{
     console. log (repositories)
 }
 while(repositories > 0)
+
+// The FOR OF loop
+// example 1
+
+const myArray = [1,2,3,4,5]
+
+for (let item of myArray){
+    console.log(item)
+}
+
+// The FOR IN loop
+// this checks for the keys or properties of an object
+// example 1
+const myObject = {
+    username: 'john',
+    age: 20,
+    country: 'canada',
+    email: 'john@gmail.com'
+}
+
+for (let item in myObject){
+    console.log(item)
+}
