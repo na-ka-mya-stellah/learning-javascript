@@ -93,6 +93,7 @@ const person = {
 person.givenName !== 'emmy' ? console.log ('who a you ?') : console.log ('your not noticed')
 person.age === 18 ? console.log ('your legit and old 👍') : console.log ('your still a babe')
 person.password !==2424 ? console.log ('enter correct password') : console.log ('confirm your identity')
+person.education !== 'dropout'?console.log('your not inclusive'):console.log('your among us come and join')
 
 // example 7
 

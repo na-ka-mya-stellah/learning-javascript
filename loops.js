@@ -74,6 +74,7 @@ do{
 while(repositories > 0)
 
 // The FOR OF loop
+// this works with iterables like arrays and strings
 // example 1
 
 const myArray = [1,2,3,4,5]
@@ -83,7 +84,7 @@ for (let item of myArray){
 }
 
 // The FOR IN loop
-// this checks for the keys or properties of an object
+// this checks for the keys or properties of an object and ENUMERATING
 // example 1
 const myObject = {
     username: 'john',
