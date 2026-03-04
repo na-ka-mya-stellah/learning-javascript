@@ -338,3 +338,5 @@ const getData = async function(){
     }
 }
 getData()
+
+// EXAMPLE 7

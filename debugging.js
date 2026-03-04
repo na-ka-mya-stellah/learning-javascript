@@ -3,7 +3,7 @@
                 //HOW TO DEBUG
                 // THE DEBUGGER keyword
 // 1.Read the code
-// 2. console .log to seee where the code is failing
+// 2. console .log to see where the code is failing
 // 3.
 
 
